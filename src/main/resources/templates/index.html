@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/fontello-256d9f31/css/fontello.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalendarToDo</title>
+    <script type="module" src="javascript/src/com/calender/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button>로그인</button>
+        </header>
+        <section>
+            <div class="main">
+                <div class="calendar-container">
+                    <header>
+                        <div class="move-day">
+                            <div class="move">
+                                <div id="before-year">
+                                    <i class="fa fa-angle-double-left"></i>
+                                </div>
+                                <div id="before-month">
+                                    <i class="fa fa-angle-left"></i>
+                                </div>
+                            </div>
+                            <div class="month-year">
+                                <label id="strMonth"></label>
+                                <label>,</label>
+                                <label id="yearCount"></label>
+                            </div>
+                            <div class="move">
+                                <div id="after-month"><i class="fa fa-angle-right"></i></div>
+                                <div id="after-year"><i class="fa fa-angle-double-right"></i></div>
+                            </div>
+                        </div>
+                    </header>
+                    <section>
+                        <div class="month">
+                            <div class="day-of-week">
+                                <label class="week">일</label>
+                                <label class="week">월</label>
+                                <label class="week">화</label>
+                                <label class="week">수</label>
+                                <label class="week">목</label>
+                                <label class="week">금</label>
+                                <label class="week">토</label>
+                            </div>
+                            <div class="week-set"></div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="todo-container">
+                    <header>
+                        <div class="choice-day">
+                            <label></label>
+                        </div>
+                    </header>
+                    <section>
+                        <div class="alert-today">오늘 계획은 최대 4개까지만 만들 수 있습니다.</div>
+                        <div class="todo-list">
+                            <div class="todo-one">
+                                <div class="checks etrans">
+                                    <input type="checkbox" id="1"> 
+                                    <label for="1"></label> 
+                                </div>
+                                <input type="text" class="content">
+                                <i class="fa fa-plus-square add-today"></i>
+                            </div>
+                        </div>
+                    </section>
+                    <footer>
+                        <div class="todo-detail">
+                            <div class="todo-detail-today">
+                                <label>달성률</label>
+                                <div>
+                                    <input type="range" min="0" max="100" step="1" value="0" id="achievement-value" >
+                                    <label id="achievement-txt">0%</label>
+                                </div>
+
+                                <label>미달성사유</label>
+                                <textarea id="reason-value" cols="10" rows="3"></textarea>
+                            </div>
+                            <div class="next-plen-list">
+                                <div class="alert-next">다음날 계획은 최대 4개까지만 만들 수 있습니다.</div>
+                                <label>다음날 계획</label>
+                                <div class="next-plen-one">
+                                    <input type="text" class="content">
+                                    <i class="fa fa-plus-square add-next-day"></i>
+                                    <!-- <i class="fa fa-minus-square delete-next-day"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </div>
+</body>
+</html>
